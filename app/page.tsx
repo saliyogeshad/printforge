@@ -1,4 +1,7 @@
-// import Image from "next/image";
+import Image from "next/image";
+import heroImage from "@/public/hero-image.png";
+
+
 
 export default function Home() {
   return (
@@ -27,11 +30,15 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <img src="/hero-image.png" 
-            className="pointer-events-none select-none "
+        <Image
+            src={heroImage}
+            className="pointer-events-none select-none w-auto h-auto"
             draggable={false}
             alt="Hero Image showcasing 3D printing models"
-            width={350} />
+            height={400}
+            width={400}
+            priority={true}
+             />
       </section>
     </main>
   )
