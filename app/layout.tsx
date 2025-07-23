@@ -1,6 +1,5 @@
 
 import "./globals.css";
-import Link from "next/link";
 import { Albert_Sans , Montserrat_Alternates } from "next/font/google";
 import { RootLayoutProps } from "@/app/types"; //no need to use /index.ts in import as 
 import Navbar from "./components/Navbar";

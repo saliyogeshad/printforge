@@ -1,8 +1,14 @@
+"use client"
+
 import Link from "next/link"
+import NavLink from "./NavLink"
+import { usePathname } from "next/navigation"
 import PFLogoIcon from "@/public/printforge-logo-icon.svg"
 import PFLogo from "@/public/printforge-logo.svg"
 
 export default function Navbar() {
+  const pathname = usePathname()
+
   return (
     <header className="w-full bg-white">
       <nav className="flex justify-between px-6 py-4">
@@ -25,12 +31,9 @@ export default function Navbar() {
           </div>
         </Link>
         <ul className="flex items-center gap-8.5">
-          <li className="text-sm uppercase cursor-pointer" draggable={false}>
-            <Link href="/3d-models">3D Models</Link>
-          </li>
-          <li className="text-sm uppercase cursor-pointer" draggable={false}>
-            <Link href="/about">About</Link>
-          </li>
+            <NavLink href="/3d-models" isActive={pathname === "/3d-models"}>3D Models</NavLink>
+            <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
+            {/* Navlink for this instance falls inside the client component boundary(use client) */}
         </ul>
       </nav>
     </header>
