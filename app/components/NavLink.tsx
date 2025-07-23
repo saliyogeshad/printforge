@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function NavLink({ href, children , isActive }:
-     { href: string ; children: React.ReactNode ; isActive?: boolean }) {
+     { href: string ; children: React.ReactNode ; isActive: boolean }) {
 
     return (
         <li className="text-sm uppercase" draggable={false}>

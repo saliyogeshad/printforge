@@ -31,7 +31,7 @@ export default function Navbar() {
           </div>
         </Link>
         <ul className="flex items-center gap-8.5">
-            <NavLink href="/3d-models" isActive={pathname === "/3d-models"}>3D Models</NavLink>
+            <NavLink href="/3d-models" isActive={pathname.startsWith("/3d-models")}>3D Models</NavLink>
             <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
             {/* Navlink for this instance falls inside the client component boundary(use client) */}
         </ul>
