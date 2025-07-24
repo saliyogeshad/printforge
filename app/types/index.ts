@@ -38,6 +38,13 @@ export type CategoryPageProps = {
         categoryName: string
     }>
 }
+export type ModelsPageProps = {
+    searchParams: {
+        q?: string
+    }
+}
+
+
 
 // Components Types
 export type ModelCardProps = {

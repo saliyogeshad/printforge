@@ -10,8 +10,9 @@ export default async function CategoryPage({params}: CategoryPageProps){
     const models = await getModels({ category: categoryName });
     
     return(
-        
+        <>
             <ModelsGrid title={`Models in ${category.displayName}`} models={models} />
+        </>
         
     )
 }
